@@ -8,6 +8,18 @@ app.get('/', function (request, response) {
 
 
 
+// REST
+app.get('/api/products', (req, res) => {
+	let products = [
+	{name: 'JavaScript Book', price: 9.99},
+	{name: 'A Xmas bullshit', price: 19.99},
+	]
+	let stringified = JSON.stringify(products);
+	res.send(stringified);
+});
+
+
+
 
 
 
